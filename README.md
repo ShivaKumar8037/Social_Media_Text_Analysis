@@ -1,7 +1,7 @@
-## Social Media Text Analysis: Pre-processing, Tokenization, and Sentiment Exploration
+## Social Media Text Analysis: Pre-processing, Tokenization, Sentiment Exploration, and SVM Model Implementation
 
 ### Overview
-In this project, we delved deep into the nuances of text data processing, especially in the realm of social media content. We experimented with various pre-processing techniques, tokenization, and polarity measurement, and explored their implications on further text analysis.
+In this project, we delved deep into the nuances of text data processing, especially in the realm of social media content. We experimented with various pre-processing techniques, tokenization, polarity measurement, and implemented an SVM model to classify the data. We explored their implications on further text analysis.
 
 ### 1. Dataset
 The dataset used is a csv file named 'trainingdata-all-annotations.csv' which contains 2,814 tweets about various targets and the stance of that tweet, opinion, and sentiment of the tweet. Targets included in the dataset are 'Atheism', 'Climate Change is a Real Concern', 'Feminist Movement', 'Hillary Clinton', and 'Legalization of Abortion'. The possible stances are 'Against', 'Favor', and 'None'. The possible sentiments are 'Positive' and 'Negative', and the opinion could be 'Other' or 'Target'.
@@ -43,11 +43,15 @@ Post pre-processing, the data from both sets were tokenized using the `CountVect
    - Derived the average polarity scores.
    - Broke down the average polarity scores by different stances and targets.
 
-### 5. Further Analysis and Discussions
+### 5. SVM Model Implementation
+
+We implemented an SVM model for classifying the pre-processed and tokenized data, taking into account the features and metrics derived from our analysis.
+
+### 6. Further Analysis and Discussions
 
 - **NLTK POS Tagging**: We observed that NLTK, which wasn't originally built for social media data, faced challenges while POS tagging such content. The informal nature and mixed languages in social media data often led to inaccurate tags.
 - **Polarity in Social Media**: Our descriptive statistics revealed certain patterns in polarity scores across various stances and targets, offering insights into public sentiment on different topics.
 - **TF-IDF vs CountVectorizer**: We discussed the scenarios where TF-IDF might be more useful than simple term frequencies, especially in datasets with diverse document lengths or when certain terms are too frequent and might overshadow other informative terms.
 
-### 6. Conclusion
-Considering the scope of this project, we learned that polarity score is a valuable metric to measure sentiment. Although the calculation of this score is bound by the words in our lexicon, the implementation offers insights into sentiment patterns in the dataset. This project serves as an essential foundation for further advanced analyses on social media content.
+### 7. Conclusion
+Considering the scope of this project, we learned that polarity score is a valuable metric to measure sentiment. Although the calculation of this score is bound by the words in our lexicon, the implementation offers insights into sentiment patterns in the dataset. The SVM model further provided a mechanism to classify and predict sentiments based on the features derived. This project serves as an essential foundation for further advanced analyses on social media content.
